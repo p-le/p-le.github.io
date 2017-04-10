@@ -1,8 +1,3 @@
-body {
-  background: #ECE9E6;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 .button-collapse {
   position: fixed;
   right: 10px;
@@ -24,7 +19,33 @@ body {
   margin: 5px 10px;
 }
 
-.table-of-contents {
-  margin-top: 40%;
+.pinned {
+  position: fixed !important;
+  top: 35%;
   font-size: 20px;
+}
+.white-text {
+  color: rgba(255, 255, 255, 0.901961);
+}
+
+blockquote {
+  border-left: 5px solid #BBDEFB !important;
+}
+.table-of-contents a.active {
+  border-left: 3px solid #BBDEFB !important;
+}
+
+.table-of-contents a:hover {
+  border-left: 1px solid #BBDEFB !important;
+}
+
+.chip {
+  cursor: pointer;
+}
+.table-of-contents {
+  margin: 0;
+}
+#name {
+  font-weight: bold;
+  padding-bottom: 5px;
 }
