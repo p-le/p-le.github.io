@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/style.css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -18,17 +19,45 @@
     <![endif]-->
 </head>
 <body>
-    <ul id="slide-out" class="side-nav">
-  
-    <li><a href="#!">Home</a></li>
-  
-    <li><a href="#!">Archives</a></li>
-  
-</ul>
-<a class="btn-floating btn-large waves-effect waves-light red button-collapse" data-activates="slide-out">
-  <i class="material-icons">menu</i>
-</a>
+    
     <div class="container">
+        <div class="row">
+            <div class="col s12 m9 l11">
+                <div id="frontend" class="section scrollspy">
+                    <h4>Frontend</h4>
+                    <img class="tech" src="images/frontend/logo-es.png"/>
+                    <img class="tech" src="images/frontend/logo-ts.png"/>
+                    <img class="tech" src="images/frontend/logo-sass.png"/>
+                    <img class="tech" src="images/frontend/logo-react.png"/>
+                    <img class="tech" src="images/frontend/logo-angular.png"/>
+                    <img class="tech" src="images/frontend/logo-vue.png"/>
+                    <img class="tech-long" src="images/frontend/logo-electron.svg"/>
+                </div>
+                <div id="backend" class="section scrollspy">
+                    <h4>Backend</h4>
+                    <img class="tech" src="images/backend/logo-node.png"/>
+                    <img class="tech" src="images/backend/logo-java.png"/>
+                    <img class="tech" src="images/backend/logo-python.png"/>
+                    <img class="tech" src="images/backend/logo-scala.png"/>
+                    <img class="tech" src="images/backend/logo-golang.png"/>
+                </div>
+                <div id="aws" class="section scrollspy">
+                    <h4>Infrastructure as Code & Cloud Computing</h4>
+                    <img class="tech" src="images/cloud/logo-ansible.png"/>
+                    <img class="tech" src="images/cloud/logo-vagrant.png"/>
+                    <img class="tech" src="images/cloud/logo-terraform.png"/>
+                    <img class="tech-long" src="images/cloud/logo-aws.png"/>
+                    <img class="tech-long" src="images/cloud/logo-docker.png"/>
+                </div>
+            </div>
+            <div class="col hide-on-small-only m3 l1">
+                <ul class="section table-of-contents">
+                    <li href="#frontend">Frontend</li>
+                    <li href="#backend">Backend</li>
+                    <li href="#aws">AWS</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="/js/materialize.min.js"></script>
