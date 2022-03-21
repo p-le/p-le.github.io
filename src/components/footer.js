@@ -8,7 +8,7 @@ const copyrightStyle = {
 }
 
 const Footer = () => (
-  <footer>
+  <footer className="my-6">
     <div className="flex justify-center items-center">
       <span>
         <a href="https://www.youtube.com/c/FullstacKAGE" target="_blank" rel="noreferrer">
