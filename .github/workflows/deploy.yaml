@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
+      - name: Update README.md Commit ID
+        run: sed -i.bak 's/COMMIT_ID/${{ github.head_ref }}.${{ github.sha }}/' static/README.md
+
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
+          deploy-branch: gh-pages
           access-token: ${{ secrets.ACCESS_TOKEN }}
