@@ -1,27 +1,15 @@
 import React from "react"
-import YouTubeEmbed from "react-youtube"
-import getYouTubeId from "get-youtube-id"
 
-const YouTube = ({ node }) => {
-  const { url } = node
-  const id = getYouTubeId(url)
+const YouTube = () => {
   return (
-    <div
-      sx={{
-        my: 4,
-        position: "relative",
-        paddingBottom: "56.25%",
-        height: 0,
-        iframe: {
-          height: "100%",
-          left: 0,
-          position: "absolute",
-          top: 0,
-          width: "100%",
-        },
-      }}
-    >
-      <YouTubeEmbed videoId={id} />
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/embed/-EKPeYN9Jy4"
+        title="Sử dụng Custom Domain với GitHub Pages - Configure Nhanh chóng & Đơn giản"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   )
 }

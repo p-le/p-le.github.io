@@ -13,7 +13,7 @@ const headerStyles = {
 }
 
 const headerAccentStyles = {
-  color: "#0084FF",
+  color: "#FFFFFF",
   textDecoration: "none",
   fontWeight: "bold",
 }
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
         {siteTitle}!
       </Link>
       <span role="img" aria-label="Party popper emojis">
-        🎉🎉🎉
+        🎉
       </span>
     </h1>
   </header>

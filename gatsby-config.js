@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `FullstacKAGE Service Hub`,
     author: "Phu Le",
-    description: "Connect to my community -- FullstacKAGE",
+    description:
+      "Phu is a DevOps Practioner, Cloud Infrastructure Engineer, and Youtube Content Creator. He lives in Tokyo, Japan",
     siteUrl: `https://fullstackage.phu-le.dev`,
   },
   plugins: [

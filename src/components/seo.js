@@ -8,7 +8,7 @@ const SEO = ({ title, description }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
-  const { defaultTitle, defaultDescription, siteUrl } = site.siteMetadata
+  const { defaultTitle, defaultDescription, siteUrl, author } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
@@ -17,11 +17,28 @@ const SEO = ({ title, description }) => {
   }
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet
+      title={seo.title}
+      bodyAttributes={{
+        class: "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+      }}
+    >
       <meta name="description" content={seo.description} />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && <meta property="og:description" content={seo.description} />}
+      <script type="application/ld+json">
+        {`{
+          "@context": "https://schema.org",
+          "@type": "Personal",
+          "url": "${seo.url}",
+          "name": "${seo.title}",
+          "author": {
+            "@type": "Person",
+            "name": "${author}"
+          },
+        }`}
+      </script>
     </Helmet>
   )
 }
@@ -35,6 +52,7 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         siteUrl: siteUrl
+        author: author
       }
     }
   }

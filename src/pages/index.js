@@ -2,6 +2,7 @@ import * as React from "react"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
+import YouTube from "../components/youtube"
 
 const sectionItemStyles = {
   width: `100%`,
@@ -16,7 +17,7 @@ const sectionItemStyles = {
 
 const linkStyle = {
   textDecoration: "none",
-  color: "#0084FF",
+  color: "#FFFFFF",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
@@ -89,7 +90,7 @@ const links = [
     badge: true,
     description:
       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#0084FF",
+    color: "#FFFFFF",
   },
 ]
 
@@ -98,26 +99,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo />
-      <>
-        {links.map((link) => (
-          <section key={link.url} style={{ ...sectionItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </section>
-        ))}
-      </>
+      <YouTube />
     </Layout>
   )
 }

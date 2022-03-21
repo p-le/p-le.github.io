@@ -9,13 +9,6 @@ const pageMainStyles = {
   flex: "1 0 auto",
 }
 
-const containerStyles = {
-  display: "flex",
-  flexDirection: "column",
-  minHeight: "100vh",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -29,7 +22,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div style={containerStyles}>
+      <div className="flex flex-col min-h-screen md:container md:mx-auto px-4 ">
         <Header siteTitle={data.site.siteMetadata?.title || `title`} />
         <main style={pageMainStyles}>{children}</main>
         <Footer />
