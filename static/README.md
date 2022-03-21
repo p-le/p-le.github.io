@@ -21,6 +21,6 @@
   </a>
 </p>
 <p align="center">
-🚀 Output files was built from `main` branch using GatsbyJS & GitHub Actions. 🚀
+🚀 Output files was built from <code>main</code> branch using GatsbyJS & GitHub Actions. 🚀
 🚀 Latest Commit Hash: COMMIT_ID 🚀
 </p>
