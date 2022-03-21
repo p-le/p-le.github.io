@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `new`,
+    title: `FullstacKAGE Service Hub`,
+    author: "Phu Le",
+    description: "Connect to my community -- FullstacKAGE",
     siteUrl: `https://fullstackage.phu-le.dev`,
   },
   plugins: [

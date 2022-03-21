@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.youtube.com/c/FullstacKAGE">
+  <a href="Hub (GitHub Page). Homepage:">
     <img alt="Gatsby" src="https://raw.githubusercontent.com/p-le/p-le/main/assets/logo.png" width="180" />
   </a>
 </p>
@@ -36,12 +36,12 @@ Navigate into root directory and start it up.
 
 ```shell
 cd p-le.github.io/
-npm run develop
+npm start
 ```
 
 2.  **Open the code and start customizing!**
 
-Your site is now running at http://localhost:8000!
+Your site is now running at `http://localhost:8000`
 
 3.  **Push to `main` branch**
 
