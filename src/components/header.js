@@ -3,22 +3,28 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const headerStyles = {
-  marginLeft: 48,
-  marginTop: 0,
-  maxWidth: 720,
+  marginLeft: `auto`,
+  marginRight: `auto`,
+  maxWidth: `1280px`,
+  paddingLeft: `32px`,
+  paddingRight: `32px`,
+  paddingTop: `24px`,
+  paddingBottom: `24px`,
 }
 
 const headerAccentStyles = {
   color: "#0084FF",
+  textDecoration: "none",
+  fontWeight: "bold",
 }
 
 const Header = ({ siteTitle }) => (
   <header>
     <h1 style={headerStyles}>
-      Welcome to
+      Welcome to,
       <br />
       <Link to="/" style={headerAccentStyles}>
-        — {siteTitle}!
+        {siteTitle}!
       </Link>
       <span role="img" aria-label="Party popper emojis">
         🎉🎉🎉

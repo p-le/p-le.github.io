@@ -1,18 +1,19 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 const pageMainStyles = {
-  color: "#232129",
-  padding: `0 96`,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  flex: "1 0 auto",
 }
 
-const pageFooterStyles = {
-  marginTop: `2rem`,
+const containerStyles = {
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "100vh",
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
 const Layout = ({ children }) => {
@@ -28,20 +29,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div style={containerStyles}>
+        <Header siteTitle={data.site.siteMetadata?.title || `title`} />
         <main style={pageMainStyles}>{children}</main>
-        <footer style={pageFooterStyles}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.youtube.com/c/FullstacKAGE">FullstacKAGE</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )

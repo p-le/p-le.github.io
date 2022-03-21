@@ -3,39 +3,23 @@ import * as React from "react"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 
-// styles
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
+const sectionItemStyles = {
+  width: `100%`,
+  marginLeft: `auto`,
+  marginRight: `auto`,
+  maxWidth: `1280px`,
+  paddingLeft: `32px`,
+  paddingRight: `32px`,
+  paddingTop: `24px`,
+  paddingBottom: `24px`,
 }
 
 const linkStyle = {
+  textDecoration: "none",
   color: "#0084FF",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
 }
 
 const descriptionStyle = {
@@ -44,12 +28,6 @@ const descriptionStyle = {
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#0084FF",
 }
 
 const badgeStyle = {
@@ -120,24 +98,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo />
-      <title>Home Page</title>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
+      <>
         {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+          <section key={link.url} style={{ ...sectionItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
@@ -152,10 +115,9 @@ const IndexPage = () => {
               )}
               <p style={descriptionStyle}>{link.description}</p>
             </span>
-          </li>
+          </section>
         ))}
-      </ul>
-      <img alt="Gatsby G Logo" width="90px" src="https://raw.githubusercontent.com/p-le/p-le/main/assets/logo.png" />
+      </>
     </Layout>
   )
 }
