@@ -20,7 +20,7 @@ const SEO = ({ title, description }) => {
     <Helmet
       title={seo.title}
       bodyAttributes={{
-        class: "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+        class: "bg-gradient-to-r to-pink-500 via-purple-500 from-indigo-500",
       }}
     >
       <meta name="description" content={seo.description} />
