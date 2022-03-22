@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  index:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,5 +16,4 @@ jobs:
           version: v3.7.1
 
       - name: Download Released Chart
-        run: |
-          gh release download -- pattern '*.tgz' -R p-le/devops-todoapp-helm-chart
+        run: gh release download --pattern '*.tgz' --repo p-le/devops-todoapp-helm-chart
