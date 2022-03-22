@@ -1,0 +1,24 @@
+name: Release Helm Chart (Manually)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: p-le/devops-todoapp-helm-chart
+
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.7.1
+
+      - name: Package Chart
+        run: mkdir -p dist && helm package ./todoapp -d dist
+
+      - name: Package Chart
+        run: ls -la dist
