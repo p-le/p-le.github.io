@@ -19,3 +19,6 @@ jobs:
 
       - name: Download Released Chart
         run: gh release download --pattern '*.tgz' --repo p-le/devops-todoapp-helm-chart
+
+      - name: List Helm Chart Packages
+        run: ls -la .
